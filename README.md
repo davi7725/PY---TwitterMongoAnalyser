@@ -19,7 +19,7 @@ This will give you a running instance of ubuntu with all the necessary applicati
 
 If you **do** have **Python3** on your system make sure you have the pymongo installed by executing: `python3 -m pip install pymongo`
 
-After obeying the pre-requirements, lets jump to how to get the project up and running.
+After obeying the pre-requirements, let's jump to how to get the project up and running.
 
 
 
@@ -32,10 +32,10 @@ This command will spin-up a new instance of mongodb and then create a link from 
   **NB! If you have *Windows*, replace **$(pwd)** with the path to a directory where you want to store the data**
 
 With the local machine running an instance of Mongo, lets now get its local ip address by typing `ifconfing` on Linux/Mac or using `ipconfig` on Windows, all of these should be executed within a terminal.
-Lets keep this IP asside since we will be needing it further on on the process.
+Let's keep this IP asside since we will be needing it further on on the process.
 
 
-Now lets clone the repository to the machine where Python is installed (either the docker ubuntu instance or the local machine) by using the following command:
+Now let's clone the repository to the machine where Python is installed (either the docker ubuntu instance or the local machine) by using the following command:
 `git clone https://github.com/davi7725/PY---TwitterMongoAnalyser.git`
 
 We also need to download the csv files to a directory of our choice that will have to, once again, remember later on. To do this simply download the zip file with:
