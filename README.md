@@ -42,7 +42,7 @@ We also need to download the csv files to a directory of our choice that will ha
 `wget http://cs.stanford.edu/people/alecmgo/trainingandtestdata.zip` followed by `unzip trainingandtestdata.zip`. **Once again keep notice of the full file path**.
 
 
-After this we have to go into the repository folder and with nano (or your favourite text editor) edit **"URL_TO_MONGODB"** and **NAME_OF_CSV_FILE** with **"mongodb://[LocalIPAddress]:27017/"** and **"[LocationOfTheCSVFile]"**.
+After this we have to go into the repository folder and with nano (or your favourite text editor) edit **"URL_TO_MONGODB"** and **"NAME_OF_CSV_FILE"** with **"mongodb://[LocalIPAddress]:27017/"** and **"[LocationOfTheCSVFile]"**.
 These would for example result in "mongodb://192.168.0.6:27017/" and "/tmp/testdata.csv"
 
 With all of these set up, it is time to run the actual program and for that we need to make sure we are in the folder that contains the python file from this repository (twitterScrape.py) and execute the following command:
