@@ -6,11 +6,11 @@ from pymongo import MongoClient
 
 from pprint import pprint
 
-client = MongoClient("mongodb://192.168.0.6:27017/")
+client = MongoClient("URL_TO_MONGODB")
 db=client.twitter
 db.tweets.remove({})
 
-with open('testdata.csv','r',encoding='utf-8', errors='ignore') as csv_file:
+with open('NAME_OF_CSV_FILE','r',encoding='utf-8', errors='ignore') as csv_file:
 	csv_reader = csv.reader(csv_file, delimiter=',')
 	for row in csv_reader:
 		tweet = {
