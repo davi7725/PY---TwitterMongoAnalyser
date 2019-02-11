@@ -45,5 +45,8 @@ We also need to download the csv files to a directory of our choice that will ha
 After this we have to go into the repository folder and with nano (or your favourite text editor) edit **"URL_TO_MONGODB"** and **"NAME_OF_CSV_FILE"** with **"mongodb://[LocalIPAddress]:27017/"** and **"[LocationOfTheCSVFile]"**.
 These would for example result in "mongodb://192.168.0.6:27017/" and "/tmp/testdata.csv"
 
+⚠️**WARNING**⚠️
+Due to using the id of the twitter as the indexed id in MongoDB you might get a Dup key error when running with the training[...].csv file, therefore it is adviseable that you use the test[...].csv . This error is created by the existence of a duplicate key in the huge data set, around half way through the dataset.
+
 With all of these set up, it is time to run the actual program and for that we need to make sure we are in the folder that contains the python file from this repository (twitterScrape.py) and execute the following command:
 `python3 twitterScrape.py`
