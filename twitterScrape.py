@@ -6,12 +6,13 @@ from pymongo import MongoClient
 
 from pprint import pprint
 
-client = MongoClient("URL_TO_MONGODB")
+client = MongoClient("mongodb://172.24.78.70:27017/")
 db=client.twitter
 db.tweets.remove({})
 
-with open('NAME_OF_CSV_FILE','r',encoding='utf-8', errors='ignore') as csv_file:
+with open('training.csv','r',encoding='utf-8', errors='ignore') as csv_file:
 	csv_reader = csv.reader(csv_file, delimiter=',')
+	tweets = []
 	for row in csv_reader:
 		tweet = {
 			"polarity":int(row[0]),
@@ -21,7 +22,10 @@ with open('NAME_OF_CSV_FILE','r',encoding='utf-8', errors='ignore') as csv_file:
 			"user":str(row[4]),
 			"content":str(row[5])
 		}
-		db.tweets.insert_one(tweet)
+		tweets.append(tweet)
+		if(len(tweets) > 500):
+			db.collection.insertMany(tweets)
+			tweets.clear()
 	print ("done");
 
 def ppall(col):
